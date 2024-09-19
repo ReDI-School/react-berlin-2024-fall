@@ -24,3 +24,6 @@ const aFunction = (name) => `Hello again, ${name}!`;
 
 // let's export them!
 
+export { anObject, aFunction };
+
+//console.log("Imported:", helloWorld("Tiago"));

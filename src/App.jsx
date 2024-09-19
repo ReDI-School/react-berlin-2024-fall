@@ -1,10 +1,10 @@
 import './App.css'
-import Lesson1 from './lessons/Lesson1'
+//import Lesson1 from './lessons/Lesson1'
 
 function App() {
   return (
     <>
-      <Lesson1 />
+      <h1>Hello, ReDI!</h1>
     </>
   )
 }

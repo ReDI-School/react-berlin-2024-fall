@@ -3,10 +3,10 @@
  */
 
 // let's import the one-liner function from the other file!
-import { helloOneLiner } from "../examples/Lesson1";
+//import { helloOneLiner } from "../examples/Lesson1";
 
 // let's use the one-liner function!
-console.log(helloOneLiner("Tiago"));
+//console.log(helloOneLiner("Tiago"));
 
 // let's also create objects, numbers, strings, arrays and functions to export!
 const anObject = {

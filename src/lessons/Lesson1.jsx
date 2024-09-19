@@ -37,6 +37,17 @@ function hello(name) {
 
 // now let's see an example of an arrow function that uses the 'this' keyword
 
+// Let's export a function to use in another file!
+
+const helloWorld = (name) => `Hello, ${name}!`;
+
+export { helloWorld };
+
+import { anObject, aFunction } from "./Lesson1Extra";
+import { aNumber } from "../examples/Lesson1Extra"
+
+console.log(aFunction("Tiago"));
+console.log("A number from Lesson1Extra:", aNumber)
 
 // now let's import another file and use the functions and other things there!
 // notice how we can also rename the imported functions and variables, in the process called 'aliasing'
