@@ -1,3 +1,21 @@
+/**
+ * Lesson 3 - Javascript you need to know for React (map, filter, reduce)
+ */
+
+
+// nothing to see here, move along.
+function ListFruits({description, fruits}) {
+  return <p>
+      {description}:
+      <ul>
+          {fruits.map((fruit, index) => <li key={index}>{fruit}</li>)}
+      </ul>
+  </p>
+}
+
+
+function Lesson3ArrayFuncs() {
+
 const FRUITS = [
     "apple",
     "apricot",
@@ -19,15 +37,20 @@ const FRUITS = [
   ];
   
 // let's SHOUT these fruits using a for loop!
+let transformedFruits = [];
 for (let i = 0; i < FRUITS.length; i++) {
-  const fruit = FRUITS[i];
-  //console.log(fruit.toUpperCase() + "!");
+  transformedFruits.push(`${FRUITS[i]}!`);
 }
-console.log("---------------");
+
 // let's now SHOUT these fruits using a forEach!
 FRUITS.forEach((fruit) => {
   //console.log(fruit.toUpperCase() + "!");
 });
+
+// what if we wanted to keep it const? how would we do that?
+// const transformedFruits = [] // ????
+
+  
 
 console.log("---------------");
 
@@ -92,6 +115,9 @@ console.log("odd fruits:", oddFruits);
 const noMelons = FRUITS.filter((fruit) => !fruit.includes("melon"));
 console.log("no melons here!", noMelons);
 
+// what if I want only the fruits that end in "berry"?
+const fruitsEndingInBerry = FRUITS.filter((fruit) => fruit.endsWith("berry"));
+
 const MY_STRINGS = ["bla", "ble", undefined, "blo", true, 0, 42];
 
 const onlyStrings = MY_STRINGS.filter((str) => str);
@@ -133,42 +159,36 @@ const reversedFruits = FRUITS.reduce((accum, fruit) => {
 }, []);
 console.log(reversedFruits);
 
-// what if I want a histogram of the sizes of the names of the fruits?
-// expected result would be like [{length: 5, count: 4}, {length: 6, count: 3}, {length:7, count: 5}...]
-const lengthHistogram = FRUITS.reduce((accum, fruit) => {
-  // get the current fruit's length to check
-  const length = fruit.length;
-  // add the current length to the accumulator
-  const addedAlready = accum.some((item) => item.length === length);
-  if (addedAlready) {
-    return accum.map((item) =>
-      item.length === length
-        ? { length: item.length, count: item.count + 1 }
-        : item
-    );
-  } else {
-    return [...accum, { length: length, count: 1 }];
-  }
-}, []);
+// ==========================================================
+// I wanna see the total count of characters in all fruits
+const sumOfNumberOfCharactersInFruits = FRUITS.reduce((accum, fruit) => accum + fruit.length, 0)
 
-console.log(lengthHistogram);
+// I wanna see all of the fruits in a single string, but shouted, and without using Array.join()
+const shoutedFruitsInOneGo = FRUITS.reduce((accum, fruit) => accum.length > 0 ? `${accum} , ${fruit.toUpperCase()}!` : `${fruit.toUpperCase()}!`, "")
 
-// what if I want the number of vowels in all the names of the fruits?
-const totalVowelLength = FRUITS.map(
-  (fruit) => fruit.match(VOWELS_REGEX).length
-).reduce((accum, vowels) => accum + vowels, 0);
-
-console.log(totalVowelLength);
+// I wanna see the total count of vowels we have in all of the fruits
+const countOfVowelsInFruits = FRUITS.reduce((accum, fruit) => accum + fruit.match(VOWELS_REGEX).length, 0)
 
 // what else is there that we can do with reduce?
 
-export default function Lesson2() {
-    return (
-      <div className="App">
-        <h1>Hello ReDI!</h1>
-        <h3>We are going to play with this component here shortly!</h3>
-        <MapTest fruits={FRUITS} />
-      </div>
-    );
-  }
-  
+    // if you haven't yet read much on JSX syntax and components, the rest of the file
+    // will seem like ✨magic✨, but this will make sense in a few sessions.
+    // Don't modify the code below.
+    return <>
+        <p>Lots of fruits!</p>
+        <ListFruits description="List of all fruits" fruits={transformedFruits} />
+        <ListFruits description="Shouting the names of the fruits" fruits={shoutedFruits} />
+        <ListFruits description="Lenghts of the names of the fruits" fruits={fruitLengths} />
+        <ListFruits description="Fruits with replaced vowels" fruits={fraats} />
+        <ListFruits description="Only the fruits that have 'a' in their names" fruits={fruitsWithA} />
+        <ListFruits description="Only the fruits with odd numbers of characters" fruits={oddFruits} />
+        <ListFruits description="Only the fruits that don't have 'melon'" fruits={noMelons} />
+        <ListFruits description="Only the fruits that end in 'berry'" fruits={fruitsEndingInBerry} />
+        <p>Sum of number of characters in all fruits: {sumOfNumberOfCharactersInFruits}</p>
+        <ListFruits description="All fruits, but in reverse order" fruits={reversedFruits} />
+        <p>Shouted fruits in one go: {shoutedFruitsInOneGo}</p>
+        <p>Count of all vowels in fruits: {countOfVowelsInFruits}</p>
+    </>
+}
+
+export default Lesson3ArrayFuncs;
