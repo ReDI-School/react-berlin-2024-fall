@@ -19,6 +19,8 @@ function App() {
     <>
       {/* <HelloClassComponent /> */}
       {/* <HelloFunctionalComponent /> */}
+      {/* <HelloClassComponent name={"students"} /> */}
+      {/* <HelloFunctionalComponent name={"students"} /> */}
       {/* <Props name={"students"} /> */}
       {/* <Props items={fruits} /> */}
       {/* <ParentComponent>

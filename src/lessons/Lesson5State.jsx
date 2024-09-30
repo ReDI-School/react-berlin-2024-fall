@@ -9,13 +9,25 @@ import React, { useState } from "react";
 //Components
 export class HelloClassComponent extends React.Component {
   render() {
-    return <div>Class component</div>;
+    return <div>This is a Class component.</div>;
   }
 }
 
 export const HelloFunctionalComponent = () => {
-  return <div>Functional component</div>;
+  return <div>This is a Functional component.</div>;
 };
+
+// export class HelloClassComponent extends React.Component {
+//   render() {
+//     // Destructuring the prop
+//     const { name } = this.props;
+//     return <div>Hello, {name}! This is a Class component.</div>;
+//   }
+// }
+
+// export const HelloFunctionalComponent = ({ name }) => {
+//   return <div>Hello, {name}! This is a Functional component.</div>;
+// };
 
 //Props
 //Props object vs destructured props
