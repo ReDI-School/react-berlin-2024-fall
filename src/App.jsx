@@ -17,14 +17,16 @@ const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
 function App() {
   return (
     <>
-      {/* <HelloClassComponent /> */}
+      <HelloClassComponent />
       {/* <HelloFunctionalComponent /> */}
       {/* <HelloClassComponent name={"students"} /> */}
       {/* <HelloFunctionalComponent name={"students"} /> */}
-      {/* <Props name={"students"} /> */}
+      {/* <Props name={"Tiago"} /> */}
       {/* <Props items={fruits} /> */}
       {/* <ParentComponent>
         <ChildComponent first={"Sofia"} second={"Anna"} third={"Karin"} />
+        <ChildComponent first={"Tiago"} second={"Anna"} third={"Karin"} />
+        <ChildComponent first={"Fabio"} second={"Anna"} third={"Karin"} />
       </ParentComponent> */}
       {/* <ClassBasedState /> */}
       {/* <ExampleOfUseState /> */}

@@ -21,7 +21,7 @@ export const HelloFunctionalComponent = () => {
 //   render() {
 //     // Destructuring the prop
 //     const { name } = this.props;
-//     return <div>Hello, {name}! This is a Class component.</div>;
+//     return <div>Hello, {this.props.name}! This is a Class component.</div>;
 //   }
 // }
 
@@ -32,13 +32,13 @@ export const HelloFunctionalComponent = () => {
 //Props
 //Props object vs destructured props
 export const Props = (props) => {
-  //   console.log("Property: ", props.name);
+  console.log("Property: ", props.name);
   //   console.log("Property, deconstructed: ", name);
-  console.log("Array props: ", props);
+  //   console.log("Array props: ", props);
 
   return (
     <div>
-      {/* <h1>Hi {props.name}!</h1> */}
+      {/* <h1>Hi {name}!</h1> */}
       {props.items.map((prop) => (
         <p key={prop}>{prop}</p>
       ))}
@@ -51,7 +51,13 @@ export const ParentComponent = ({ children }) => {
   console.log("Parent component");
   //Or props.children
 
-  return <ul>{children}</ul>;
+  return (
+    <ul>
+      {children.map((child) => {
+        return <li style={{ border: "2px solid white" }}>{child}</li>;
+      })}
+    </ul>
+  );
 };
 
 export const ChildComponent = ({ first, second, third }) => {
@@ -96,7 +102,7 @@ export class ClassBasedState extends React.Component {
   }
 }
 
-//useState
+//useState - hook
 export const ExampleOfUseState = () => {
   const [isVisible, setIsVisible] = useState(false);
   //Always declare hooks at top level to make sure they run the same way every render!
