@@ -2,22 +2,24 @@ import "./App.css";
 //import Lesson1 from './lessons/Lesson1'
 // import Lesson3SpreadRest from "./lessons/Lesson3SpreadRest";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
-import {
-  HelloClassComponent,
-  HelloFunctionalComponent,
-  Props,
-  ParentComponent,
-  ChildComponent,
-  ClassBasedState,
-  ExampleOfUseState,
-} from "./lessons/Lesson5State";
+// import {
+//   HelloClassComponent,
+//   HelloFunctionalComponent,
+//   Props,
+//   ParentComponent,
+//   ChildComponent,
+//   ClassBasedState,
+//   ExampleOfUseState,
+// } from "./lessons/Lesson5State";
+import Calculatron from "./lessons/Lesson6Calculatron";
 
-const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
+// const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
 
 function App() {
   return (
     <>
-      <HelloClassComponent />
+      <Calculatron />
+      {/* <HelloClassComponent /> */}
       {/* <HelloFunctionalComponent /> */}
       {/* <HelloClassComponent name={"students"} /> */}
       {/* <HelloFunctionalComponent name={"students"} /> */}
