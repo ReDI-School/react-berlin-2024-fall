@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+
+.calculatron {
+
+}
+
+.calculatron div.result {
+  background-color: lightblue;
+  border-radius: 1em;
+  height: 2em;
+  color: darkslategrey;
+  vertical-align: bottom;
+  text-align: right;
+  font-size: 20pt;
+  padding: 1em;
+}
+
+.calculatron div.result .previous {
+  color: darkgrey;
+  font-size: 12pt;
+}
+.calculatron button.operation {
+  background-color: darkred;
+}
+
+.calculatron button.result {
+  background-color: green;
+}
+
+.calculatron button.function {
+  background-color: orange;
+}
