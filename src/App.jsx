@@ -11,14 +11,16 @@ import "./App.css";
 //   ClassBasedState,
 //   ExampleOfUseState,
 // } from "./lessons/Lesson5State";
-import Calculatron from "./lessons/Lesson6Calculatron";
+// import Calculatron from "./lessons/Lesson6Calculatron";
+import FruitBasket from "./lessons/Lesson7ConditionalRendering";
 
 // const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
 
 function App() {
   return (
     <>
-      <Calculatron />
+     {<FruitBasket/>}
+      {/* <Calculatron /> */}
       {/* <HelloClassComponent /> */}
       {/* <HelloFunctionalComponent /> */}
       {/* <HelloClassComponent name={"students"} /> */}
