@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  height: 100vh;
 }
 
 .logo {
@@ -70,4 +71,23 @@
 
 .calculatron button.function {
   background-color: orange;
+}
+
+.navbar {
+  padding: 16px;
+}
+
+.fruit-list-wrapper {
+  width: 200px;
+}
+
+.fruit-list {
+  padding: 0px;
+}
+
+.fruit {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
