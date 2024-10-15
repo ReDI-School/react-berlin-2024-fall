@@ -2,6 +2,7 @@ import "./App.css";
 //import Lesson1 from './lessons/Lesson1'
 // import Lesson3SpreadRest from "./lessons/Lesson3SpreadRest";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
+
 // import {
 //   HelloClassComponent,
 //   HelloFunctionalComponent,
@@ -11,15 +12,18 @@ import "./App.css";
 //   ClassBasedState,
 //   ExampleOfUseState,
 // } from "./lessons/Lesson5State";
+
 // import Calculatron from "./lessons/Lesson6Calculatron";
-import FruitBasket from "./lessons/Lesson7ConditionalRendering";
+// import FruitBasket from "./lessons/Lesson7ConditionalRendering";
+import Lesson8Router from "./lessons/Lesson8Router";
 
 // const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
 
 function App() {
   return (
     <>
-     {<FruitBasket/>}
+      <Lesson8Router />
+      {/* {<FruitBasket/>} */}
       {/* <Calculatron /> */}
       {/* <HelloClassComponent /> */}
       {/* <HelloFunctionalComponent /> */}
