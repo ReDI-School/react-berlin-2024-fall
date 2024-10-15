@@ -91,3 +91,23 @@
   justify-content: space-between;
   align-items: center;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0 1em;
+}
+
+nav ul li a.active {
+  text-decoration: none;
+  color: #ba51f7;
+}
