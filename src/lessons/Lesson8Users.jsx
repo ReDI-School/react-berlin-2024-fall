@@ -10,11 +10,12 @@ const USERS = [
 ];
 
 export function User() {
+    {/* [ ] Task 6: get the user ID from the URL */}
     const {name, id} = USERS.find((user) => user.id === 1);
     return <>
         <h1>{name}</h1>
         <p>User ID: {id}</p>
-        {/* [ ] Task 6: add a link to go back to the users directory */}
+        {/* [ ] Task 7: add a link to go back to the users directory */}
     </>
 }
 
