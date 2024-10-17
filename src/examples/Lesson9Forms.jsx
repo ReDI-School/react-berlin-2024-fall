@@ -5,20 +5,52 @@
  * We will also add validation (if time allows) to the form, and reset the form data when the form is submitted.
  */
 
+import { useState } from "react";
+import Button from "../components/Button/Button";
+
 const ContactForm = () => {
-  // Task 1 [ ]: add state to store form data
-  // Task 2 [ ]: Add function to handle form changes
+  // Task 1 [x]: add state to store form data
+  const [formData, setFormData] = useState({
+    gender: "",
+    name: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+    favoriteColors: [],
+    preferredContact: "",
+    newName: "",
+  });
+
+  // Task 2 [x]: Add function to handle form changes
+  const handleChange = (event) => {
+    setFormData((prevState) => {
+      return {
+        ...prevState,
+        [event.target.name]: event.target.value,
+      };
+    });
+  };
+
   // Task 3 [ ]: Add function to handle form submission
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log("Form submitted");
+    console.log(formData);
+  };
+
   // Task 4 [ ]: Add function to reset form data
 
+  // console.log(name);
+
   return (
-    <form action="">
+    <form action="" onSubmit={handleFormSubmit}>
       <fieldset>
         <legend>Contact Form</legend>
 
         <div className="input-group">
           <label htmlFor="gender">Gender:</label>
-          <select name="gender" id="gender">
+          <select name="gender" id="gender" onChange={handleChange}>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
@@ -27,27 +59,67 @@ const ContactForm = () => {
 
         <div className="input-group">
           <label htmlFor="name">First name:</label>
-          <input type="text" name="name" id="name" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="input-group">
-          <label htmlFor="name">Last name:</label>
-          <input type="text" name="name" id="name" />
+          <label htmlFor="name">New name:</label>
+          <input
+            type="text"
+            name="newName"
+            id="newName"
+            value={formData.newName}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="input-group">
+          <label htmlFor="lastName">Last name:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="input-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" name="email" id="email" />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="input-group">
           <label htmlFor="phone">Phone:</label>
-          <input type="tel" name="phone" id="phone" />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="input-group">
           <label htmlFor="message">Message:</label>
-          <textarea name="message" id="message"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
         </div>
 
         <div className="checkbox-group">
@@ -112,7 +184,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <button type="submit">Submit</button>
+        <Button buttonType={"reset"}>Submit</Button>
         <button type="reset">Reset</button>
       </fieldset>
     </form>
