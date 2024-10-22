@@ -4,26 +4,28 @@ import "./App.css";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
 
 // import {
-//   HelloClassComponent,
-//   HelloFunctionalComponent,
-//   Props,
-//   ParentComponent,
-//   ChildComponent,
-//   ClassBasedState,
-//   ExampleOfUseState,
-// } from "./lessons/Lesson5State";
-
-// import Calculatron from "./lessons/Lesson6Calculatron";
-// import FruitBasket from "./lessons/Lesson7ConditionalRendering";
-// import Lesson8Router from "./examples/Lesson8Router";
-import ContactForm from "./examples/Lesson9Forms";
+  //   HelloClassComponent,
+  //   HelloFunctionalComponent,
+  //   Props,
+  //   ParentComponent,
+  //   ChildComponent,
+  //   ClassBasedState,
+  //   ExampleOfUseState,
+  // } from "./lessons/Lesson5State";
+  
+  // import Calculatron from "./lessons/Lesson6Calculatron";
+  // import FruitBasket from "./lessons/Lesson7ConditionalRendering";
+  // import Lesson8Router from "./examples/Lesson8Router";
+  //import ContactForm from "./examples/Lesson9Forms";
+import RestaurantView from "./preject/RestaurantView";
 
 // const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
 
 function App() {
   return (
     <>
-      <ContactForm />
+      <RestaurantView />
+      {/* <ContactForm /> */}
       {/* <Lesson8Router /> */}
       {/* {<FruitBasket/>} */}
       {/* <Calculatron /> */}
