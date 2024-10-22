@@ -8,7 +8,7 @@ import MenuItem from "./components/MenuItem/MenuItem"
 
 // Let's create a small restaurant application, using what we already learned so far.
 // [ ] Task 1: What we want to see is a list of the dishes that we have in the mocks/dishes.json file
-//     Notice that the dishes reference image files in the /public/images directory
+//     Notice the dishes reference image files in the /public/images directory
 //
 // [ ] Task 2: then we will exercise our React powers by filtering and displaying only the dishes that match our filter
 //     We should have a search bar where we update our list as soon as the input changes, and display all items if nothing is in our filter
