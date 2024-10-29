@@ -15,8 +15,12 @@ const Lesson11EventHandlersExercises = () => {
        * Task 10: [ ] Add an onMouseOut event handler to the button element that logs a message to the console when the mouse pointer moves out of the element.
        */}
       <form action="">
-        <input>Click Me</input>
-        <button>Submit</button>
+        <fieldset>
+          <div className="input-group">
+            <input type="text" />
+          </div>
+          <button>Submit</button>
+        </fieldset>
       </form>
     </div>
   );
