@@ -1,0 +1,26 @@
+.recipeCardImage {
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px;
+}
+
+/* if two classes define background-color,
+  and are used at the same time, 
+  the last definition "wins" */
+
+.recipeCard {
+  background-color: beige;
+}
+
+.promotion {
+  background-color: rgb(251, 87, 128);
+}
+
+#specialPromotion {
+  /* The # selector (by ID) is very specific,
+  and will have precedence over class-based styles */
+  background-color: deeppink;
+}
