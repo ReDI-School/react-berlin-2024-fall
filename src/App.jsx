@@ -5,6 +5,7 @@ import "./App.css";
 // import Lesson3SpreadRest from "./lessons/Lesson3SpreadRest";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
 import Lesson13useEffect from "./lessons/Lesson13useEffect";
+import CatFact from "./exercises/lessson13"
 
 // import {
 //   HelloClassComponent,
@@ -27,7 +28,8 @@ import Lesson13useEffect from "./lessons/Lesson13useEffect";
 function App() {
   return (
     <>
-      <Lesson13useEffect/>
+      <CatFact />
+      {/* <Lesson13useEffect/> */}
       {/* <Lesson12Styling /> */}
       {/* <Lesson11EventHandlersExercises /> */}
       {/* <RestaurantView /> */}
