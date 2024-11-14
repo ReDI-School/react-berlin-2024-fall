@@ -39,3 +39,84 @@
  *  you can find details on the docs here: https://pokeapi.co/docs/v2#evolution-section
  *
  */
+
+import { useEffect, useState } from "react"
+
+function PokeCard({url}) {
+
+    const [name, setName] = useState("")
+    const [spriteUrl, setSpriteUrl] = useState("")
+    const [stats, setStats] = useState([])
+
+
+    const fetchPokemonData = async (url) => {
+        try {
+            const response = await fetch(url)
+            if (!response.ok) {
+                console.error("Response was not ok!")
+
+            } else {
+                const {name, sprites: { front_default }, stats} = await response.json()
+                setName(name)
+                setSpriteUrl(front_default)
+                setStats(stats)
+                
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    useEffect(
+        () => {
+            fetchPokemonData(url)  
+        }
+        , [url]
+    )
+    
+
+    return <div>
+        <h3>{name}</h3>
+        <img src={spriteUrl} />
+        <ul>
+            {stats && stats.map((stat) => <li key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</li>)}
+        </ul>
+    </div>
+}
+
+function Pokedex() {
+    
+    const [pokemon, setPokemon] = useState([])
+
+    const fetchPokemon = async () => {
+        const URL = "https://pokeapi.co/api/v2/pokemon?offset=20&limit=20"
+        try {
+            const response = await fetch(URL)
+            if (!response.ok) {
+                console.error("Response was not ok!")
+
+            } else {
+                const {results} = await response.json()
+                setPokemon(results)
+                //console.log("pokemon data", data)
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    useEffect(
+        () => {
+            fetchPokemon();
+        }
+    , [])
+
+    return <>
+        <h1>Pokedex</h1>
+        <ul>
+            {pokemon && pokemon.map(monster => <li key={monster.name}><PokeCard url={monster.url} /></li>)}
+        </ul>
+    </>
+}
+
+export default Pokedex
