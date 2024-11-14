@@ -4,8 +4,8 @@ import "./App.css";
 //import Lesson1 from './lessons/Lesson1'
 // import Lesson3SpreadRest from "./lessons/Lesson3SpreadRest";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
-import Lesson13useEffect from "./lessons/Lesson13useEffect";
-import CatFact from "./exercises/lessson13"
+//import Lesson13useEffect from "./examples/Lesson13useEffect";
+import Pokedex from "./examples/lesson13pokemon";
 
 // import {
 //   HelloClassComponent,
@@ -28,8 +28,8 @@ import CatFact from "./exercises/lessson13"
 function App() {
   return (
     <>
-      <CatFact />
-      {/* <Lesson13useEffect/> */}
+      <Pokedex />
+      {/* <Lesson13useEffect /> */}
       {/* <Lesson12Styling /> */}
       {/* <Lesson11EventHandlersExercises /> */}
       {/* <RestaurantView /> */}
