@@ -22,6 +22,30 @@ import "./Lesson13useEffect.css";
 const Lesson13Exercise = () => {
   const URL = "https://restcountries.com/v3.1/all";
 
+  const fetchCountires = async () => {
+    try {
+      const reponse = await fetch(URL)
+      if (!reponse.ok) {
+        //loading
+        // errors handling
+      }
+      const result = await reponse.json();
+      console.log('result', result);
+      // set sth
+    }
+    catch (error) {
+      console.error(error);
+    }
+    finally {
+      // loading
+    }
+  }
+
+  useEffect(() => {
+    fetchCountires();
+  }, []);
+
+
 
 
 
