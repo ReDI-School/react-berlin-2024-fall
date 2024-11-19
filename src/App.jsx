@@ -1,7 +1,8 @@
 import "./App.css";
 // import Lesson11EventHandlers from "./examples/Lesson11EventHandlers";
 // import Lesson11EventHandlersExercises from "./exercises/lesson11EventHandlers";
-import Lesson12Styling from "./lessons/Lesson12Styling";
+// import Lesson12Styling from "./lessons/Lesson12Styling";
+import Lesson15ContextAPI from "./lessons/Lesson15ContextAPI";
 //import Lesson1 from './lessons/Lesson1'
 // import Lesson3SpreadRest from "./lessons/Lesson3SpreadRest";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
@@ -27,7 +28,7 @@ import Lesson12Styling from "./lessons/Lesson12Styling";
 function App() {
   return (
     <>
-      <Lesson12Styling />
+      <Lesson15ContextAPI />
       {/* <Lesson11EventHandlersExercises /> */}
       {/* <RestaurantView /> */}
       {/* <ContactForm /> */}
