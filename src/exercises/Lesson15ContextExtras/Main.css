@@ -1,0 +1,23 @@
+.light {
+    background-color: lightblue;
+    color: rgb(17, 17, 48);
+}
+.dark {
+    background-color: rgb(46, 46, 46);
+    color: rgb(232, 232, 232);
+}
+
+.light .menuItem {
+    background-color:#fff; /* Card background color */
+}
+
+.dark .menuItem {
+    background-color: #404040; /* Card background color */
+}
+
+.light .menuItem h3 {
+    background-color: #f2f2f2; /* Light grey background for the title */
+}
+.dark .menuItem h3 {
+    background-color: #a5a5a5; /* Dark grey background for the title */
+}
