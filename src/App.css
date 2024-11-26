@@ -111,3 +111,7 @@ nav ul li a.active {
   text-decoration: none;
   color: #ba51f7;
 }
+
+.vercelInstructions ol li {
+  text-align: left;
+}
