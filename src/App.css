@@ -111,3 +111,25 @@ nav ul li a.active {
   text-decoration: none;
   color: #ba51f7;
 }
+
+.vercelInstructions ol li {
+  text-align: left;
+}
+
+.vercelInstructions ol li code {
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 0.2em;
+  border-radius: 0.2em;
+}
+
+.vercelInstructions ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.vercelInstructions ol li::before {
+  content: 'Step ' counter(item) ": ";
+  counter-increment: item;
+  font-weight: bold;
+}

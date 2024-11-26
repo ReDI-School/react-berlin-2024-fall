@@ -1,15 +1,7 @@
 import "./App.css";
-// import Lesson11EventHandlers from "./examples/Lesson11EventHandlers";
-// import Lesson11EventHandlersExercises from "./exercises/lesson11EventHandlers";
-// import Lesson12Styling from "./lessons/Lesson12Styling";
-// import Lesson15ContextAPI from "./lessons/Lesson15ContextAPI";
-// import Lesson15ContextExtras from "./exercises/Lesson15ContextExtras/Main"
 // import Lesson1 from './lessons/Lesson1'
 // import Lesson3SpreadRest from "./lessons/Lesson3SpreadRest";
 // import Lesson4JSX from "./lessons/Lesson4JSX";
-// import Lesson13useEffect from "./examples/Lesson13useEffect";
-// import Pokedex from "./examples/lesson13pokemon";
-
 // import {
 //   HelloClassComponent,
 //   HelloFunctionalComponent,
@@ -19,11 +11,20 @@ import "./App.css";
 //   ClassBasedState,
 //   ExampleOfUseState,
 // } from "./lessons/Lesson5State";
-
 // import Calculatron from "./lessons/Lesson6Calculatron";
 // import FruitBasket from "./lessons/Lesson7ConditionalRendering";
 // import Lesson8Router from "./examples/Lesson8Router";
-//import ContactForm from "./examples/Lesson9Forms";
+// import ContactForm from "./examples/Lesson9Forms";
+// import Lesson11EventHandlers from "./examples/Lesson11EventHandlers";
+// import Lesson11EventHandlersExercises from "./exercises/lesson11EventHandlers";
+// import Lesson12Styling from "./lessons/Lesson12Styling";
+// import Lesson13useEffect from "./examples/Lesson13useEffect";
+// import Pokedex from "./examples/lesson13pokemon";
+// import Lesson15ContextAPI from "./lessons/Lesson15ContextAPI";
+// import Lesson15ContextExtras from "./exercises/Lesson15ContextExtras/Main"
+import Lesson19Vercel from "./lessons/Lessorn19Vercel";
+
+
 // import RestaurantView from "./preject/RestaurantView";
 
 // const fruits = ["Orange", "Apple", "Pinapple", "Melon"];
@@ -31,7 +32,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Lesson15ContextExtras />
+      <Lesson19Vercel />
+      {/* <Lesson15ContextExtras /> */}
       {/* <Lesson15ContextAPI /> */}
       {/* <Pokedex /> */}
       {/* <Lesson13useEffect /> */}
